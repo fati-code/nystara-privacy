@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Nystara</title>
+  <meta name="description" content="Nystara privacy policy. We collect nothing. Everything stays on your device." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #F5F0E8;
+      --charcoal:#1C1C1C;
+      --teal:    #2A7D6F;
+      --teal-lt: #E1F0EE;
+      --mid:     #5F5E5A;
+      --border:  #E0DAD0;
+      --white:   #FFFFFF;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--teal);
+    }
+
+    .header-tag {
+      font-size: 12px;
+      color: var(--mid);
+      background: var(--teal-lt);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+      text-align: center;
+      max-width: 100%;
+    }
+
+    .hero-label {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    .promise-chips {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--teal-lt);
+      color: var(--teal);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip::before {
+      content: "✓";
+      font-weight: 700;
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: var(--charcoal);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+      padding: 20px 22px;
+      margin: 20px 0;
+    }
+
+    .highlight p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--charcoal);
+    }
+
+    /* ── DATA TABLE ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .data-table th {
+      background: var(--teal);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      color: var(--charcoal);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .data-table tr:first-child td { border-top: none; }
+    .data-table tr:nth-child(even) td { background: #faf8f4; }
+
+    .td-label {
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    /* ── STEPS LIST ── */
+    .steps { list-style: none; margin: 16px 0; }
+
+    .steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    .steps li:first-child { border-top: none; padding-top: 0; }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── NONE LIST ── */
+    .none-list { list-style: none; margin: 16px 0; }
+
+    .none-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .none-list li::before {
+      content: "—";
+      color: var(--teal);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .contact-box p {
+      font-size: 15px;
+      color: var(--mid);
+      margin-bottom: 18px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--teal);
+      text-decoration: none;
+      padding: 10px 24px;
+      border: 2px solid var(--teal);
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .contact-email:hover {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo span { color: var(--teal); }
+
+    .footer-sub {
+      font-size: 13px;
+      color: var(--mid);
+      margin-bottom: 14px;
+    }
+
+    .footer-meta {
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px 36px; }
+      .page { padding: 36px 20px 60px; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 10px 12px; }
+      header { padding: 16px 20px; }
+    }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="logo">Nyst<span>ara</span></a>
+    <span class="header-tag">Privacy Policy</span>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-label">Privacy Policy</p>
+    <h1>We collect nothing.<br>Everything stays on your device.</h1>
+    <p class="hero-sub">Nystara was built for people who deserve tools that respect them. That starts with privacy.</p>
+    <div class="promise-chips">
+      <span class="chip">No account required</span>
+      <span class="chip">No data sent to servers</span>
+      <span class="chip">No third parties</span>
+      <span class="chip">You can delete everything</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="page">
+
+    <!-- EFFECTIVE DATE -->
+    <div class="section">
+      <p style="font-size:14px; color:var(--mid);">
+        <strong>Effective date:</strong> January 1, 2025 &nbsp;·&nbsp;
+        <strong>Last updated:</strong> January 1, 2025 &nbsp;·&nbsp;
+        <strong>Applies to:</strong> Nystara iOS and Android apps
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- WHO WE ARE -->
+    <div class="section">
+      <p class="section-label">About</p>
+      <h2>Who we are</h2>
+      <p>Nystara is a reading app built for people with nystagmus — a condition that causes involuntary eye movement, making it physically exhausting to read across a page of text. The app delivers text one word at a time to a single fixed point on your screen, so your eyes never have to move.</p>
+      <p>Nystara is an independent reading app based in Los Angeles, California.</p>
+    </div>
+
+    <!-- THE SHORT VERSION -->
+    <div class="section">
+      <p class="section-label">The short version</p>
+      <h2>What this policy covers</h2>
+      <div class="highlight">
+        <p>Nystara does not collect, transmit, sell, or share your personal data. Everything the app stores — your reading preferences, your place in a document, and the text of documents you upload — stays on your device, encrypted. Nothing is sent to us or to any third party. Ever.</p>
+      </div>
+      <p>This privacy policy explains in detail what data the app stores on your device, how it is protected, how long it is kept, and how you can delete it. We are required to publish this policy by Apple's App Store and Google Play, even though we collect no external data.</p>
+    </div>
+
+    <!-- WHAT IS STORED -->
+    <div class="section">
+      <p class="section-label">Data storage</p>
+      <h2>What Nystara stores — and where</h2>
+      <p>Nystara stores three types of data, all locally on your device. Nothing leaves your phone.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>What</th>
+            <th>Where stored</th>
+            <th>How long</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="td-label">Your preferences</span><br>Reading speed, display theme, font size, word padding, reading mode (Focus or Calm)</td>
+            <td>On your device<br>(MMKV encrypted storage)</td>
+            <td>Until you change them or delete the app</td>
+          </tr>
+          <tr>
+            <td><span class="td-label">Reading sessions</span><br>Which document you were reading, which word you stopped on, total time spent reading</td>
+            <td>On your device<br>(MMKV encrypted storage)</td>
+            <td>90 days, then automatically deleted</td>
+          </tr>
+          <tr>
+            <td><span class="td-label">Document content</span><br>Text extracted from PDFs you upload, or text you paste into the app</td>
+            <td>On your device<br>(iOS Keychain / Android Keystore — hardware-backed encryption)</td>
+            <td>Until you delete the document or uninstall the app</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight">
+        <p><strong>Note on PDF files:</strong> When you upload a PDF, Nystara extracts the text and then immediately and permanently deletes the original PDF file from app storage. Only the extracted text is kept — encrypted on your device.</p>
+      </div>
+    </div>
+
+    <!-- HOW IT'S PROTECTED -->
+    <div class="section">
+      <p class="section-label">Security</p>
+      <h2>How your data is protected</h2>
+      <p>All data stored by Nystara is encrypted using your device's own security systems. We do not have access to your data — not because we choose not to look, but because it is technically impossible for us to access it.</p>
+      <ul class="none-list">
+        <li>Reading preferences and session data are stored using MMKV, an encrypted key-value storage library that uses AES-128 encryption.</li>
+        <li>Document content is stored using your device's hardware-backed encryption: iOS Keychain on Apple devices, Android Keystore on Android devices. This is the same system used to protect your passwords and payment information.</li>
+        <li>No data is ever transmitted over a network. There is no server. There is no database. There is nothing to breach on our end.</li>
+      </ul>
+    </div>
+
+    <!-- WHAT WE DON'T COLLECT -->
+    <div class="section">
+      <p class="section-label">What we do not do</p>
+      <h2>Data we never collect</h2>
+      <p>To be completely explicit about what Nystara does not do:</p>
+      <ul class="none-list">
+        <li>We do not collect your name, email address, or any account information. There is no account. There is no login.</li>
+        <li>We do not collect your location.</li>
+        <li>We do not use analytics tools (no Google Analytics, no Firebase, no Mixpanel, no Amplitude).</li>
+        <li>We do not use crash reporting services that send data off your device.</li>
+        <li>We do not use advertising networks or tracking pixels.</li>
+        <li>We do not share any data with third parties — because there is no data to share.</li>
+        <li>We do not collect information about your medical condition, vision status, or diagnosis.</li>
+        <li>We do not run background processes that collect data when you are not using the app.</li>
+      </ul>
+    </div>
+
+    <!-- PERMISSIONS -->
+    <div class="section">
+      <p class="section-label">App permissions</p>
+      <h2>What permissions Nystara requests</h2>
+      <p>Nystara requests only the permissions it needs to function.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why it's needed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="td-label">Storage / Files</span></td>
+            <td>To read PDF files you choose to upload for reading. The app cannot access your files unless you explicitly select one.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Nystara does not request access to your camera, microphone, location, contacts, calendar, health data, or any other sensitive permissions.</p>
+    </div>
+
+    <!-- CHILDREN -->
+    <div class="section">
+      <p class="section-label">Age</p>
+      <h2>Children's privacy</h2>
+      <p>Nystara does not knowingly collect personal information from children under the age of 13. The app does not require an account or any personal information from any user of any age. Parents and educators may use Nystara on behalf of children with nystagmus — no data about the child is transmitted or stored beyond the encrypted local preferences described above.</p>
+    </div>
+
+    <!-- YOUR RIGHTS -->
+    <div class="section">
+      <p class="section-label">Your rights</p>
+      <h2>Your rights and choices</h2>
+      <p>Because all data is stored locally on your device, you have complete control at all times.</p>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <span><strong>View what's stored:</strong> Go to Settings → Privacy → View my data. You will see exactly what Nystara has stored on your device.</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span><strong>Delete everything:</strong> Go to Settings → Privacy → Delete all my data. This permanently removes all preferences, session history, and document content from your device. This action cannot be undone.</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span><strong>Delete the app:</strong> Uninstalling Nystara from your device permanently removes all data the app has stored. Nothing remains on our servers because nothing was ever sent there.</span>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <span><strong>Delete a specific document:</strong> In your document list, swipe left on any document and tap Delete. The document content is permanently removed from encrypted storage.</span>
+        </li>
+      </ol>
+    </div>
+
+    <!-- CCPA -->
+    <div class="section">
+      <p class="section-label">California</p>
+      <h2>California residents (CCPA)</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act (CCPA) gives you rights over your personal information. Because Nystara does not collect, sell, or share personal information, most CCPA provisions do not apply in a traditional sense. However, to be explicit:</p>
+      <ul class="none-list">
+        <li>We do not sell your personal information to any third party.</li>
+        <li>We do not share your personal information for cross-context behavioral advertising.</li>
+        <li>You have the right to know what personal information is collected about you. Our answer: none, beyond what is stored locally on your device as described in this policy.</li>
+        <li>You have the right to delete your personal information. Instructions are in the "Your rights and choices" section above.</li>
+      </ul>
+      <p>To exercise any CCPA rights or ask questions, contact us at the email address below.</p>
+    </div>
+
+    <!-- GDPR -->
+    <div class="section">
+      <p class="section-label">European users</p>
+      <h2>GDPR — European Economic Area</h2>
+      <p>If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, the General Data Protection Regulation (GDPR) may apply to you. Because Nystara processes no personal data on our servers, we are not a data controller or data processor in the traditional GDPR sense. All processing occurs locally on your device under your sole control.</p>
+      <p>If you have questions about your rights under GDPR, contact us at the email below and we will respond within 30 days.</p>
+    </div>
+
+    <!-- CHANGES -->
+    <div class="section">
+      <p class="section-label">Updates</p>
+      <h2>Changes to this policy</h2>
+      <p>If we ever update this privacy policy, we will update the "Last updated" date at the top of this page and, for material changes, notify you through the app. We will never change our core commitment: Nystara will not collect, transmit, sell, or share your personal data.</p>
+      <p>The most current version of this policy is always available at this URL.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <div class="contact-box">
+      <h2>Questions about this policy?</h2>
+      <p>We will respond to all privacy inquiries within 30 days.</p>
+      <a href="mailto:privacy@nystara.app" class="contact-email">privacy@nystara.app</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-logo">Nyst<span>ara</span></p>
+    <p class="footer-sub">Reading for dancing eyes.</p>
+    <p class="footer-meta">
+      © 2025 Nystara · Los Angeles, California ·
+      <a href="#" style="color:var(--mid);text-decoration:none;">Back to top ↑</a>
+    </p>
+  </footer>
+
+</body>
+</html>
