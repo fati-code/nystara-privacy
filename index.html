@@ -459,7 +459,7 @@
       <ul class="none-list">
         <li>Reading preferences and session data are stored using MMKV, an encrypted key-value storage library that uses AES-128 encryption.</li>
         <li>Document content is stored using your device's hardware-backed encryption: iOS Keychain on Apple devices, Android Keystore on Android devices. This is the same system used to protect your passwords and payment information.</li>
-        <li>No data is ever transmitted over a network. There is no server. There is no database. There is nothing to breach on our end.</li>
+        <li>Nystara uses Supabase, a secure database service, solely to store anonymous usage counts — such as how many reading sessions have been started. This data contains no personal information, no names, no device identifiers, and cannot be traced back to any individual user. We do not use third-party advertising or tracking analytics tools of any kind.</li>
       </ul>
     </div>
 
